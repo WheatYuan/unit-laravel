@@ -5,23 +5,26 @@
 
 ## Installing
 
+Laravel >= 5.1
+
 ```shell
 $ composer require wheat/unit-laravel -vvv
 ```
 
 ## Usage
 
-TODO
+在 `config/app.php` 注册 ServiceProvider 和 Facade (Laravel 5.5 无需手动注册)
 
 ## Contributing
 
-You can contribute in one of three ways:
+```php
+'providers' => [
+    ShineYork\SJunitLaravel\SJunitServiceProvide::class,
+]
 
-1. File bug reports using the [issue tracker](https://github.com/wheat/unit-laravel/issues).
-2. Answer questions or fix bugs on the [issue tracker](https://github.com/wheat/unit-laravel/issues).
-3. Contribute new features or update the wiki.
-
-_The code contribution process is not very formal. You just need to make sure that you follow the PSR-0, PSR-1, and PSR-2 coding guidelines. Any new code contributions must be accompanied by unit tests where applicable._
+Route::get('/', 'SJunitController@index');
+Route::post('/', 'SJunitController@store')->name('junit.store');
+```
 
 ## License
 
