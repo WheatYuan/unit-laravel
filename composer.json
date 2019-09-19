@@ -15,5 +15,12 @@
         "psr-4": {
             "Wheat\\UnitLaravel\\": "src"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wheat\\UnitLaravel\\Providers\\UnitServiceProvider"
+            ]
+        }
     }
 }
