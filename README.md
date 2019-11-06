@@ -19,11 +19,11 @@ $ composer require wheat/unit-laravel -vvv
 
 ```php
 'providers' => [
-    ShineYork\SJunitLaravel\SJunitServiceProvide::class,
+    Wheat\UnitLaravel\UnitServiceProvide::class,
 ]
 
-Route::get('/', 'SJunitController@index');
-Route::post('/', 'SJunitController@store')->name('junit.store');
+Route::get('/', 'UnitController@index');
+Route::post('/', 'UnitController@store')->name('unit.store');
 ```
 
 ## License
