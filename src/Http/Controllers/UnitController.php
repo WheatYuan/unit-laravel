@@ -23,7 +23,7 @@ class UnitController extends Controller
         $action = $request->input('action');
         $param = $request->input('param');
         $class = ($className == "") ? ucfirst($namespace) : ucfirst($namespace).'\\'.ucfirst($className);
-        // 要提换的值 需要的结果
+        // 要替换的值 需要的结果
         $class = str_replace("/", "\\", $class);
         $object = new $class();
         $param = ($param == "") ? [] : explode('|', $param) ;
